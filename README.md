@@ -8,8 +8,11 @@ instituição).
 Os 4 pilares do SOLID são implementados no código abaixo.
 
 1 - Abstração
+
 2 - Encapsulamento
+
 3 - Herança
+
 4 - Polimorfismo
 
 ## Abstração
@@ -19,4 +22,3 @@ ignorando características menos importantes ou acidentais.
 ## Encapsulamento
 É a habilidade de esconder a implementação dos objetos, criando assim interfaces
 de uso mais concisas e fáceis de usar/entender.
-
