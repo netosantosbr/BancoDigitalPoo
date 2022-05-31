@@ -3,8 +3,12 @@ package bancoDigital;
 public class Cliente {
 
     public String nome;
-    public String cpf;
-    public String endereco;
-    public String telefone;
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
