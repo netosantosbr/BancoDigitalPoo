@@ -1,9 +1,13 @@
 package bancoDigital;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 //classe abstrata não pode ser instanciada.
 public abstract class Conta implements IConta {
 
+    Banco banco = new Banco();
     private static final int AGENCIA_PADRAO = 1;
 
     private static int SEQUENCIAL = 1;
@@ -11,8 +15,9 @@ public abstract class Conta implements IConta {
     protected int numero;
     protected double saldo;
 
-    protected Cliente cliente;
+    protected List<Conta> contas = banco.getContas();
 
+    protected Cliente cliente;
 
     public Conta(Cliente cliente) {
         this.agencia = Conta.AGENCIA_PADRAO;
@@ -47,15 +52,20 @@ public abstract class Conta implements IConta {
     @Override
     public void transferir(double valor, int numerodaconta) {
         if (valor > this.saldo) {
-            throw new RuntimeException("tiehetih");
-//            System.out.println("Operação inválida, saldo insuficiente.");
+//            throw new RuntimeException("tiehetih");
+            System.out.println("Operação inválida, saldo insuficiente.");
         }else {
             this.sacar(valor);
-            depositar(valor);
+
+            for (Conta conta : contas) {
+                if (conta.getNumero() == numerodaconta) {
+                    conta.depositar(valor);
+                    System.out.printf("Transferência para %s realizada com sucesso", conta.cliente.getNome().toUpperCase());
+                }else{
+                    System.out.println("Conta inexistente");
+                }
+            }
         }
-
-
-
     }
 
 

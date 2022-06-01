@@ -17,6 +17,9 @@ public class Banco{
     }
 
     public List<Conta> getContas() {
+        if(contas == null) {
+            contas = new ArrayList<>();
+        }
         return contas;
     }
 
