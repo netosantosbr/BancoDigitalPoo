@@ -3,7 +3,7 @@ package bancoDigital;
 //classe abstrata não pode ser instanciada.
 public abstract class Conta implements IConta{
 
-    private static final int AGENCIA_PADRAO = 0001;
+    private static final int AGENCIA_PADRAO = 1;
 
     private static int SEQUENCIAL = 1;
     protected int agencia;
