@@ -26,3 +26,6 @@ de uso mais concisas e fáceis de usar/entender.
 ## Herança
 É a habilidade de reutilizar, estender ou modificar o comportamento de uma classe 
 filha, sem alterar o comportamento de uma classe pai.
+
+## Polimorfismo
+É a habilidade de um objeto poder ser referenciado de várias formas.
