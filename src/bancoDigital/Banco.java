@@ -1,5 +1,6 @@
 package bancoDigital;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Banco {
@@ -21,5 +22,12 @@ public class Banco {
 
     public void setContas(List<Conta> contas) {
         this.contas = contas;
+    }
+
+    public void adicionarConta(Conta contaCorrente) {
+        if(contas == null) {
+            contas = new ArrayList<>();
+        }
+        contas.add(contaCorrente);
     }
 }
