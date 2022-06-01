@@ -12,13 +12,14 @@ public class Main {
         Banco banco = new Banco();
         banco.setNome("Banco Digital");
 
-       while (opcao != 5) {
+       while (opcao != 6) {
 
            System.out.println("1 - Cadastrar Cliente");
-           System.out.println("2 - Cadastrar Conta");
+           System.out.println("2 - Listar Contas");
            System.out.println("3 - Sacar");
            System.out.println("4 - Depositar");
-           System.out.println("5 - Sair");
+           System.out.println("5 - Transferir");
+           System.out.println("6 - Sair");
            System.out.print("Digite a opção desejada: ");
            opcao = scanner.nextInt();
 
@@ -56,6 +57,8 @@ public class Main {
                                 break;
                      }
                    break;
+
+
 
                case 5:
                    System.out.println("Saindo...");

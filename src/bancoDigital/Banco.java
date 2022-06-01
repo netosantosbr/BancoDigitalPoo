@@ -3,7 +3,7 @@ package bancoDigital;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Banco {
+public class Banco{
 
     public String nome;
     private List<Conta> contas;
@@ -30,4 +30,6 @@ public class Banco {
         }
         contas.add(contaCorrente);
     }
+
+
 }

@@ -2,7 +2,7 @@ package bancoDigital;
 
 
 //classe abstrata não pode ser instanciada.
-public abstract class Conta implements IConta{
+public abstract class Conta implements IConta {
 
     private static final int AGENCIA_PADRAO = 1;
 
@@ -19,7 +19,6 @@ public abstract class Conta implements IConta{
         this.numero = SEQUENCIAL++;
         this.cliente = cliente;
     }
-
 
     @Override
     public void sacar(double valor) {
@@ -46,18 +45,19 @@ public abstract class Conta implements IConta{
     }
 
     @Override
-    public void transferir(double valor, Conta contaDestino) {
+    public void transferir(double valor, int numerodaconta) {
         if (valor > this.saldo) {
-            new RuntimeException();
-            System.out.println("Operação inválida, saldo insuficiente.");
+            throw new RuntimeException("tiehetih");
+//            System.out.println("Operação inválida, saldo insuficiente.");
         }else {
             this.sacar(valor);
-            contaDestino.depositar(valor);
+            depositar(valor);
         }
 
 
 
     }
+
 
 
     public int getAgencia() {
