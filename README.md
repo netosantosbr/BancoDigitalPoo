@@ -22,3 +22,7 @@ ignorando características menos importantes ou acidentais.
 ## Encapsulamento
 É a habilidade de esconder a implementação dos objetos, criando assim interfaces
 de uso mais concisas e fáceis de usar/entender.
+
+## Herança
+É a habilidade de reutilizar, estender ou modificar o comportamento de uma classe 
+filha, sem alterar o comportamento de uma classe pai.

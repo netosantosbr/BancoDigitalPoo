@@ -1,20 +1,27 @@
 package bancoDigital;
 
-public class Conta {
-    public enum Tipo {
-        CORRENTE, POUPANCA
-    }
+//classe abstrata não pode ser instanciada.
+public abstract class Conta implements IConta{
+//    public enum Tipo {
+//        CORRENTE, POUPANCA
+//    }
     public int agencia;
     public int numero;
     public double saldo;
 
-    public void sacar() {
+    @Override
+    public void sacar(double valor) {
+
     }
 
-    public void depositar() {
+    @Override
+    public void depositar(double valor) {
+
     }
 
-    public void transferir() {
+    @Override
+    public void transferir(double valor, Conta contaDestino) {
+
     }
 
 
@@ -29,4 +36,6 @@ public class Conta {
     public double getSaldo() {
         return saldo;
     }
+
+
 }
