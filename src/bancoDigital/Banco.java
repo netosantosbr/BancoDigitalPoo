@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Banco{
-	//Teste
+	//Testes
     public String nome;
     private List<Conta> contas;
 
